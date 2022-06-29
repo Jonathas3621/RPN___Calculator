@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Courier+Prime">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <section class="calculator-body">
+        <div class="display">
+            <h1 class="display-show" onselectstart="return false">
+                <div id="message" class="display-bar">Home</div>
+                <div class="pile">
+                    <div class="display-bar pile-item">2 : <span class="content" id="2"></span></div>
+                    <div class="display-bar pile-item">1 : <span class="content" id="1"></span></div>
+                </div>
+                <div id="current" class="display-bar">
+                    <div class="current-line">
+                        <p>x : </p>
+                        <span id="number"></span>
+                        <span class="pointer"></span> 
+                        <style>
+                            .pointer{
+                                visibility: visible;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </h1>
+        </div>
+        <div class="key-container" onselectstart="return false">
+
+            <!-- Linha -->
+            <div id="enter" class="key" value="Enter">en</div>
+            <div id="backspace" class="key" value="Backspace">Bs</div>
+            
+            <!-- Linha -->
+            <div id="7" class="key" value="7">7</div>
+            <div id="8" class="key" value="8">8</div>
+            <div id="9" class="key" value="9">9</div> 
+            <div id="/" class="key" value="/">/</div>
+            
+            <!-- Linha -->
+            <div id="4" class="key" value="4">4</div>
+            <div id="5" class="key" value="5">5</div>
+            <div id="6" class="key" value="6">6</div>
+            <div id="*" class="key" value="*">*</div>
+
+            <!-- Linha -->
+            <div id="1" class="key" value="1">1</div>
+            <div id="2" class="key" value="2">2</div>
+            <div id="3" class="key" value="3">3</div>
+            <div id="-" class="key" value="-">-</div>
+           
+            <!-- Linha -->
+            <div id="0" class="key" value="0">0</div>
+            <div id="vz1" class="key" value=""></div>
+            <div id="vz2" class="key" value=""></div>
+            <div id="+" class="key" value="+">+</div>
+
+        </div>
+    </section>
+    <script src="assets/js/script.js"> </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+:root{
+    --calc-width: 320px;
+    --calc-height: 450px;
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00132d;
+}
+
+/* GRid area configurations */
+
+#enter{grid-area: enter;}
+#backspace{grid-area: backspace;}
+#seven{grid-area: seven;}
+#eight{grid-area: eight;}
+#nine{grid-area: nine;}
+#div{grid-area: div;}
+#four{grid-area: four;}
+#five{grid-area: five;}
+#six{grid-area: six;}
+#mult{grid-area: mult;}
+#one{grid-area: one;}
+#two{grid-area: two;}
+#three{grid-area: three;}
+#less{grid-area: less;}
+#zero{grid-area: zeroo;}
+#vz1{grid-area: vz1;}
+#vz2{grid-area: vz2;}
+#plus{grid-area: plus;}
+
+.calculator-body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: var(--calc-height);
+    width: var(--calc-width);
+    padding: 10px;
+    background-color: #002d67; 
+    border-radius: 10px;
+    box-shadow: 2px 0 10px #00111c;
+}
+.display{
+    background-color: #001a2c;
+    height: 30%;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+.display-show{
+    color: whitesmoke;
+    font-family: 'Courier Prime', monospace;
+    overflow: hidden;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+.display-bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 29.75px;
+    min-height: 29.75px;
+    max-height: 29.75px;
+}
+#message{
+    border-bottom: 2px solid red;
+}
+.pile{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.current-line{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+    height: 1rem;
+}
+.current-line p{
+    height: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-end;
+}
+#number{
+    display: flex;
+    align-items: flex-end;
+    text-align: end;
+}
+.pointer{
+    height: 3px;
+    width: 15px;
+    background-color: red;
+    margin-left: 5px;
+}
+.key-container{
+    width: 100%;
+    height: 65%;
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+    "enter enter enter backspace"
+    "seven eight nine div"
+    "four five six mult"
+    "one two three less"
+    "zeroo vz1 vz2 plus"
+    ;
+}
+.key{
+    background-color: #11001c;
+    box-shadow: 0 0 4px #00111c;
+    border-radius: 8px;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.key-active{
+    background-color: #191024;
+    box-shadow: 0 0 2px #00111c;
+}
+@media (max-width: 400px){
+    .calculator-body{
+        width: 100%;
+        aspect-ratio: 45/32;
+    }
+}
